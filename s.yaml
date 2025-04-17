@@ -8,7 +8,6 @@ access: "{{ access }}"
 vars:
   region: "cn-hangzhou" 
   service_domain: ${env(service_domain)}
-  cert_id: ${env(cert_id)}
 
 services:
   whisperx-webui: # 业务名称/模块名称
@@ -96,8 +95,7 @@ services:
               - OPTIONS
       customDomains:
         - domainName: ${vars.service_domain}
-          protocol: HTTP,HTTPS
-          certId: ${vars.cert_id}
+          protocol: HTTP
           routeConfigs:
             - path: /*
               serviceName: whisperx-webui
