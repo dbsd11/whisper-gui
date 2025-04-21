@@ -25,6 +25,7 @@ services:
         name: "whisperx-webui"
         description: 'whisperx webui'
         vpcConfig: auto
+        logConfig: auto
         ossMountConfig: 
           mountPoints: 
             - bucketName: whisperx-test
