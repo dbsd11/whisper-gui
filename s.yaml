@@ -53,8 +53,8 @@ services:
           timeoutSeconds: 3
           successThreshold: 1
           initialDelaySeconds: 10
-        cpu: 4
-        memorySize: 4096 # 单位MB
+        cpu: 8
+        memorySize: 8192 # 单位MB
         diskSize: 512 # 单位MB
         instanceConcurrency: 200
         autoScaling:  
