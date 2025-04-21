@@ -47,7 +47,7 @@ services:
         customContainerConfig: 
           image: "registry.cn-hangzhou.aliyuncs.com/dbsnolimit/linux_amd64_whisper-gui:build"
         customHealthCheckConfig:
-          failureThreshold: 120
+          failureThreshold: 6
           httpGetUrl: /
           periodSeconds: 10
           timeoutSeconds: 3
