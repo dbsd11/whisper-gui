@@ -32,6 +32,11 @@ services:
               endpoint: https://oss-cn-hangzhou-internal.aliyuncs.com
               mountDir: /mnt/whisperx-models
               readOnly: false
+            - bucketName: whisperx-test
+              bucketPath: /models-alignment
+              endpoint: https://oss-cn-hangzhou-internal.aliyuncs.com
+              mountDir: /whisper-gui/models
+              readOnly: false
       function:
         name: "whisperx-webui-api"
         description: 'whisperx webui api server'
