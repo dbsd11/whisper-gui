@@ -3,7 +3,7 @@ name: build whisper-gui
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
     paths:
       - 'whisper-gui/**'
       - '!whisper-gui/README.md'
