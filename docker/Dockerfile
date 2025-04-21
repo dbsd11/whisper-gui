@@ -33,7 +33,7 @@ RUN conda create --name whisper-gui python=3.10 -y && \
         torchaudio==2.0.2 \
         cpuonly && \
     pip install \
-        ctranslate2>=4.5.0 \
+        ctranslate2==4.6.0 \
         faster-whisper==1.1.0 \
         gradio==5.25.2 \
         gradio-client==1.8.0 \
