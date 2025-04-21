@@ -49,6 +49,7 @@ services:
         environmentVariables:
           HF_HOME: /mnt/whisperx-models
           HF_ENDPOINT: https://hf-mirror.com/
+          HUGGINGFACE_HUB_CACHE: /mnt/whisperx-models
           GRADIO_SERVER_NAME: 0.0.0.0
         customContainerConfig: 
           image: "registry.cn-hangzhou.aliyuncs.com/dbsnolimit/linux_amd64_whisper-gui:build"
