@@ -34,7 +34,7 @@ RUN conda create --name whisper-gui python=3.10 -y && \
         cpuonly && \
     pip install \
         ctranslate2==4.0.0 \
-        faster-whisper==1.1.1 \
+        faster-whisper==1.1.0 \
         gradio==5.25.2 \
         gradio-client==1.8.0 \
         git+https://github.com/m-bain/whisperx.git@v3.3.2 && \
