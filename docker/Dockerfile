@@ -38,7 +38,7 @@ RUN conda create --name whisper-gui python=3.10 -y && \
         gradio==5.25.2 \
         gradio-client==1.8.0 \
         git+https://github.com/m-bain/whisperx.git@v3.3.2 && \
-    git clone https://github.com/Pikurrot/whisper-gui
+    git clone https://github.com/dbsd11/whisper-gui
 
 # prepare whisper-gui
 WORKDIR /whisper-gui
