@@ -52,7 +52,7 @@ services:
           HUGGINGFACE_HUB_CACHE: /mnt/whisperx-models
           GRADIO_SERVER_NAME: 0.0.0.0
         customContainerConfig: 
-          image: "registry.cn-hangzhou.aliyuncs.com/dbsnolimit/linux_amd64_whisper-gui:build"
+          image: "registry.cn-hangzhou.aliyuncs.com/dbsnolimit/linux_amd64_whisper-gui:build@sha256:fe9d750da1d64a5d2443dc7fcd2e96f4d380f9b7f14860905cec68be07e2416d"
         customHealthCheckConfig:
           failureThreshold: 6
           httpGetUrl: /
