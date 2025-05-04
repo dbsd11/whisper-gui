@@ -41,7 +41,8 @@ if error or gpu_support not in ("false", "cuda", "rocm"):
 			write_config_value("gpu_support", "false")
 
 # global variables
-ALIGN_LANGS = ["en", "fr", "de", "es", "it", "ja", "zh", "nl", "uk", "pt", "ar", "cs", "ru", "pl", "hu", "fi", "fa", "el", "tr", "da", "he", "vi", "ko", "ur", "te", "hi", "ca", "ml", "no", "nn"]
+# ALIGN_LANGS = ["en", "fr", "de", "es", "it", "ja", "zh", "nl", "uk", "pt", "ar", "cs", "ru", "pl", "hu", "fi", "fa", "el", "tr", "da", "he", "vi", "ko", "ur", "te", "hi", "ca", "ml", "no", "nn"]
+ALIGN_LANGS = ["en"]
 g_model = None
 g_model_a = None
 g_model_a_metadata = None
@@ -306,7 +307,7 @@ def _transcribe() -> Tuple[str, str, str, str]:
 whisperx_models = ["distil-whisper/distil-large-v3"]
 custom_models = list_models()
 # whisperx_langs = ["auto", "en", "es", "fr", "de", "it", "ja", "zh", "nl", "uk", "pt"]
-whisperx_langs = ["en"]
+whisperx_langs = ["auto", "en"]
 custom_langs = ["auto"] + list(LANG_CODES.keys())
 
 # Read config
@@ -344,7 +345,7 @@ with gr.Blocks(title="Whisper GUI") as demo:
 					save_audio = gr.Checkbox(value=False, label=MSG["save_audio_label"], info=MSG["save_audio_info"])
 				gr.Examples(examples=["examples/coffe_break_example.mp3"], inputs=audio_upload)
 				with gr.Accordion(label=MSG["advanced_options"], open=False):
-					language_select = gr.Dropdown(whisperx_langs, value = "auto", label=MSG["language_select_label"], info=MSG["language_select_info"]+MSG["change_align_reload"])
+					language_select = gr.Dropdown(whisperx_langs, value = "en", label=MSG["language_select_label"], info=MSG["language_select_info"]+MSG["change_align_reload"])
 					device_select = gr.Radio(["gpu", "cpu"], value = device, label=MSG["device_select_label"], info=device_message+MSG["change_both_reload"], interactive=device_interactive)
 					with gr.Group():
 						with gr.Row():
