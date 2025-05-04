@@ -38,11 +38,6 @@ services:
               endpoint: https://oss-cn-hangzhou-internal.aliyuncs.com
               mountDir: /whisper-gui/models
               readOnly: false
-            - bucketName: whisperx-test
-              bucketPath: /models-custom
-              endpoint: https://oss-cn-hangzhou-internal.aliyuncs.com
-              mountDir: /whisper-gui/models/custom
-              readOnly: false
               
       function:
         name: "whisperx-webui-api"
