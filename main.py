@@ -302,9 +302,11 @@ def _transcribe() -> Tuple[str, str, str, str]:
 
 
 # Prepare interface data
-whisperx_models = ["large-v3", "large-v2", "large-v1", "medium", "small", "base", "tiny", "medium.en", "small.en", "base.en", "tiny.en"]
+# whisperx_models = ["large-v3", "large-v2", "large-v1", "medium", "small", "base", "tiny", "medium.en", "small.en", "base.en", "tiny.en"]
+whisperx_models = ["distil-whisper/distil-large-v3"]
 custom_models = list_models()
-whisperx_langs = ["auto", "en", "es", "fr", "de", "it", "ja", "zh", "nl", "uk", "pt"]
+# whisperx_langs = ["auto", "en", "es", "fr", "de", "it", "ja", "zh", "nl", "uk", "pt"]
+whisperx_langs = ["en"]
 custom_langs = ["auto"] + list(LANG_CODES.keys())
 
 # Read config
