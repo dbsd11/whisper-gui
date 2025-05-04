@@ -102,7 +102,7 @@ class CustomWhisper():
 				padding = torch.zeros((input_features.shape[0], input_features.shape[1], padding_length), device=self.device, dtype=self.compute_type)
 				input_features = torch.cat([input_features, padding], dim=2)
 
-			predicted_ids = self.model.generate(input_features, language=language, num_beams=self.beam_size)
+			predicted_ids = self.model.generate(input_features, language=language, num_beams=self.beam_size, is_multilingual=True)
 
 			batch_transcriptions = self.processor.batch_decode(predicted_ids, skip_special_tokens=True)
 			transcriptions.extend(batch_transcriptions)
